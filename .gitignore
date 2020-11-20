@@ -1,2 +1,4 @@
-*lsf
+*lsf*
 *mymodel
+__pycache__/
+.ipynb_checkpoints/
