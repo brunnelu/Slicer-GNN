@@ -1,0 +1,184 @@
+Sender: LSF System <lsfadmin@lo-s4-039>
+Subject: Job 7251500: <python model.py> in cluster <leonhard> Exited
+
+Job <python model.py> was submitted from host <lo-login-01> by user <brunnelu> in cluster <leonhard> at Tue Jul 28 13:37:49 2020
+Job was executed on host(s) <4*lo-s4-039>, in queue <gpu.4h>, as user <brunnelu> in cluster <leonhard> at Tue Jul 28 13:37:56 2020
+</cluster/home/brunnelu> was used as the home directory.
+</cluster/home/brunnelu/graph-net> was used as the working directory.
+Started at Tue Jul 28 13:37:56 2020
+Terminated at Tue Jul 28 14:07:03 2020
+Results reported at Tue Jul 28 14:07:03 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python model.py
+------------------------------------------------------------
+
+TERM_OWNER: job killed by owner.
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2308.60 sec.
+    Max Memory :                                 9999 MB
+    Average Memory :                             8574.83 MB
+    Total Requested Memory :                     16368.00 MB
+    Delta Memory :                               6369.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                52
+    Run time :                                   1775 sec.
+    Turnaround time :                            1754 sec.
+
+The output (if any) follows:
+
+2020-07-28 13:37:59.346870: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-28 13:38:02.466209: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-07-28 13:38:02.536198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:07:00.0
+2020-07-28 13:38:02.536245: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-28 13:38:02.539530: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-28 13:38:02.542344: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-28 13:38:02.543088: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-28 13:38:02.545988: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-28 13:38:02.547681: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-28 13:38:02.552966: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-28 13:38:02.558793: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-07-28 13:38:02.567310: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199960000 Hz
+2020-07-28 13:38:02.567855: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5764a10 executing computations on platform Host. Devices:
+2020-07-28 13:38:02.567879: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-07-28 13:38:02.773791: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x57ecf60 executing computations on platform CUDA. Devices:
+2020-07-28 13:38:02.773828: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080, Compute Capability 6.1
+2020-07-28 13:38:02.779928: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 major: 6 minor: 1 memoryClockRate(GHz): 1.7335
+pciBusID: 0000:07:00.0
+2020-07-28 13:38:02.779994: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-28 13:38:02.780046: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-28 13:38:02.780078: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-07-28 13:38:02.780106: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-07-28 13:38:02.780133: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-07-28 13:38:02.780160: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-07-28 13:38:02.780187: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-28 13:38:02.788545: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-07-28 13:38:02.788614: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-07-28 13:38:03.363273: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-07-28 13:38:03.363314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-07-28 13:38:03.363327: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-07-28 13:38:03.369314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 7532 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080, pci bus id: 0000:07:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/experimental/ops/readers.py:521: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+2020-07-28 13:38:14.421574: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-07-28 13:38:24.807024: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:143] Filling up shuffle buffer (this may take a while): 71 of 128
+2020-07-28 13:38:32.350803: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:193] Shuffle buffer filled.
+2020-07-28 13:38:33.548019: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-07-28 13:44:53.990691: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-07-28 13:44:53.991013: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-07-28 13:45:51.529089: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-07-28 13:45:51.529355: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+dataset path: /cluster/scratch/brunnelu/data/
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+reshape (Reshape)            (None, 20, 20, 12)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 20, 20, 12)        48        
+_________________________________________________________________
+conv2d (Conv2D)              (None, 18, 18, 8)         872       
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 16, 16, 16)        1168      
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 14, 14, 8)         1160      
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 12, 12, 4)         292       
+_________________________________________________________________
+flatten (Flatten)            (None, 576)               0         
+_________________________________________________________________
+dense (Dense)                (None, 64)                36928     
+_________________________________________________________________
+dense_1 (Dense)              (None, 32)                2080      
+_________________________________________________________________
+dense_2 (Dense)              (None, 16)                528       
+_________________________________________________________________
+dense_3 (Dense)              (None, 8)                 136       
+_________________________________________________________________
+dense_4 (Dense)              (None, 1)                 9         
+=================================================================
+Total params: 43,221
+Trainable params: 43,197
+Non-trainable params: 24
+_________________________________________________________________
+(20, 240)
+
+0.0
+(20, 240)
+
+0.0
+Epoch 1/100
+336/336 - 459s - loss: 0.4539 - accuracy: 0.5461 - mse: 0.4539 - val_loss: 0.0000e+00 - val_accuracy: 0.0000e+00 - val_mse: 0.0000e+00
+2020-07-28 13:46:01.723157: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:143] Filling up shuffle buffer (this may take a while): 75 of 128
+2020-07-28 13:46:08.620223: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:193] Shuffle buffer filled.
+2020-07-28 13:52:17.071091: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-07-28 13:52:17.071382: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-07-28 13:53:10.819472: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-07-28 13:53:10.819719: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 2/100
+343/343 - 439s - loss: 0.4640 - accuracy: 0.5357 - mse: 0.4643 - val_loss: 0.0000e+00 - val_accuracy: 0.0000e+00 - val_mse: 0.0000e+00
+2020-07-28 13:53:21.470666: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:143] Filling up shuffle buffer (this may take a while): 100 of 128
+2020-07-28 13:53:24.389926: I tensorflow/core/kernels/data/shuffle_dataset_op.cc:193] Shuffle buffer filled.
+2020-07-28 13:59:40.919250: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-07-28 13:59:40.919489: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-07-28 14:00:34.547810: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-07-28 14:00:34.548105: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 3/100
+342/342 - 444s - loss: 0.4622 - accuracy: 0.5379 - mse: 0.4621 - val_loss: 0.0000e+00 - val_accuracy: 0.0000e+00 - val_mse: 0.0000e+00
+2020-07-28 14:07:01.178126: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-07-28 14:07:01.178531: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 4/100
+338/338 - 387s - loss: 0.4527 - accuracy: 0.5462 - mse: 0.4538
+Traceback (most recent call last):
+  File "model.py", line 70, in <module>
+  File "model.py", line 67, in train
+    
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/keras/engine/training.py", line 728, in fit
+    use_multiprocessing=use_multiprocessing)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/keras/engine/training_v2.py", line 337, in fit
+    eval_data_iter = iter(validation_dataset)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/ops/dataset_ops.py", line 332, in __iter__
+    return iterator_ops.IteratorV2(self)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/ops/iterator_ops.py", line 593, in __init__
+    self._create_iterator(dataset)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/ops/iterator_ops.py", line 599, in _create_iterator
+    dataset = dataset._apply_options()
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/ops/dataset_ops.py", line 295, in _apply_options
+    static_optimization_configs)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/ops/dataset_ops.py", line 3741, in __init__
+    **self._flat_structure)
+  File "/cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/ops/gen_dataset_ops.py", line 3945, in optimize_dataset
+    optimization_configs)
+KeyboardInterrupt

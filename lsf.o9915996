@@ -1,0 +1,406 @@
+Sender: LSF System <lsfadmin@lo-s4-007>
+Subject: Job 9915996: <python model.py 4> in cluster <leonhard> Exited
+
+Job <python model.py 4> was submitted from host <lo-login-01> by user <brunnelu> in cluster <leonhard> at Mon Sep 14 00:55:19 2020
+Job was executed on host(s) <6*lo-s4-007>, in queue <gpu.24h>, as user <brunnelu> in cluster <leonhard> at Mon Sep 14 00:55:57 2020
+</cluster/home/brunnelu> was used as the home directory.
+</cluster/home/brunnelu/graph-net> was used as the working directory.
+Started at Mon Sep 14 00:55:57 2020
+Terminated at Tue Sep 15 00:54:52 2020
+Results reported at Tue Sep 15 00:54:52 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+python model.py 4
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   124084.05 sec.
+    Max Memory :                                 15007 MB
+    Average Memory :                             12862.85 MB
+    Total Requested Memory :                     24552.00 MB
+    Delta Memory :                               9545.00 MB
+    Max Swap :                                   -
+    Max Processes :                              3
+    Max Threads :                                64
+    Run time :                                   86360 sec.
+    Turnaround time :                            86373 sec.
+
+The output (if any) follows:
+
+2020-09-14 00:56:00.492778: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-09-14 00:56:03.981428: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-09-14 00:56:04.058764: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0e:00.0
+2020-09-14 00:56:04.058814: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-09-14 00:56:04.064366: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-09-14 00:56:04.068313: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-09-14 00:56:04.071941: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-09-14 00:56:04.076833: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-09-14 00:56:04.079500: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-09-14 00:56:04.087089: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-09-14 00:56:04.095265: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-09-14 00:56:04.105407: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199850000 Hz
+2020-09-14 00:56:04.106171: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5165c20 executing computations on platform Host. Devices:
+2020-09-14 00:56:04.106198: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): Host, Default Version
+2020-09-14 00:56:04.317902: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5206800 executing computations on platform CUDA. Devices:
+2020-09-14 00:56:04.317963: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-09-14 00:56:04.323377: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1618] Found device 0 with properties: 
+name: GeForce GTX 1080 Ti major: 6 minor: 1 memoryClockRate(GHz): 1.582
+pciBusID: 0000:0e:00.0
+2020-09-14 00:56:04.323418: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-09-14 00:56:04.323438: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-09-14 00:56:04.323451: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-09-14 00:56:04.323464: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-09-14 00:56:04.323477: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-09-14 00:56:04.323491: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-09-14 00:56:04.323504: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-09-14 00:56:04.330343: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1746] Adding visible gpu devices: 0
+2020-09-14 00:56:04.331354: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-09-14 00:56:05.491865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1159] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-09-14 00:56:05.492082: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1165]      0 
+2020-09-14 00:56:05.492103: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1178] 0:   N 
+2020-09-14 00:56:05.500802: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1304] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10407 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:0e:00.0, compute capability: 6.1)
+WARNING:tensorflow:From /cluster/apps/python/3.7.4_gpu_gcc630/x86_64/lib64/python3.7/site-packages/tensorflow_core/python/data/experimental/ops/readers.py:521: parallel_interleave (from tensorflow.python.data.experimental.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy execution is desired, use `tf.data.Options.experimental_determinstic`.
+2020-09-14 00:56:19.562880: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-09-14 00:56:22.993998: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-09-14 01:47:39.723514: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 01:47:39.723657: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 01:54:21.042771: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 01:54:21.042764: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+dataset path: /cluster/scratch/brunnelu/data/
+running model 4
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+reshape (Reshape)            (None, 20, 20, 12)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 20, 20, 12)        48        
+_________________________________________________________________
+dense (Dense)                (None, 20, 20, 64)        832       
+_________________________________________________________________
+dense_1 (Dense)              (None, 20, 20, 32)        2080      
+_________________________________________________________________
+dense_2 (Dense)              (None, 20, 20, 16)        528       
+_________________________________________________________________
+dense_3 (Dense)              (None, 20, 20, 8)         136       
+_________________________________________________________________
+reshape_1 (Reshape)          (None, 20, 160)           0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 20, 64)            10304     
+_________________________________________________________________
+dense_5 (Dense)              (None, 20, 32)            2080      
+_________________________________________________________________
+dense_6 (Dense)              (None, 20, 32)            1056      
+_________________________________________________________________
+dense_7 (Dense)              (None, 20, 16)            528       
+_________________________________________________________________
+flatten (Flatten)            (None, 320)               0         
+_________________________________________________________________
+dense_8 (Dense)              (None, 64)                20544     
+_________________________________________________________________
+dense_9 (Dense)              (None, 32)                2080      
+_________________________________________________________________
+dense_10 (Dense)             (None, 32)                1056      
+_________________________________________________________________
+dense_11 (Dense)             (None, 16)                528       
+_________________________________________________________________
+dense_12 (Dense)             (None, 16)                272       
+_________________________________________________________________
+dense_13 (Dense)             (None, 8)                 136       
+_________________________________________________________________
+dense_14 (Dense)             (None, 1)                 9         
+=================================================================
+Total params: 42,217
+Trainable params: 42,193
+Non-trainable params: 24
+_________________________________________________________________
+(20, 240)
+
+0.0
+(20, 240)
+
+0.0
+Epoch 1/100
+24497/24497 - 3484s - loss: 0.4961 - accuracy: 0.5039 - mse: 0.4961 - val_loss: 0.0000e+00 - val_accuracy: 0.0000e+00 - val_mse: 0.0000e+00
+2020-09-14 02:42:08.035569: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 02:42:08.035627: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 02:49:39.183855: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 02:49:39.183882: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 2/100
+24482/24482 - 3318s - loss: 0.4932 - accuracy: 0.5042 - mse: 0.4958 - val_loss: 0.4165 - val_accuracy: 0.5835 - val_mse: 0.4165
+2020-09-14 03:34:46.624239: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 03:34:46.624273: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 03:42:17.574577: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 03:42:17.574587: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 3/100
+24471/24471 - 3158s - loss: 0.4916 - accuracy: 0.5047 - mse: 0.4953 - val_loss: 0.4185 - val_accuracy: 0.5814 - val_mse: 0.4186
+2020-09-14 04:27:17.660777: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 04:27:17.660805: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 04:34:12.640664: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 04:34:12.640776: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 4/100
+24482/24482 - 3115s - loss: 0.4897 - accuracy: 0.5037 - mse: 0.4963 - val_loss: 0.4184 - val_accuracy: 0.5816 - val_mse: 0.4184
+2020-09-14 05:19:39.027587: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 05:19:39.027639: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 05:26:11.007979: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 05:26:11.008040: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 5/100
+24464/24464 - 3118s - loss: 0.5008 - accuracy: 0.5051 - mse: 0.4949 - val_loss: 0.4164 - val_accuracy: 0.5836 - val_mse: 0.4164
+2020-09-14 06:10:56.099752: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 06:10:56.099888: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 06:18:37.195961: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 06:18:37.195962: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 6/100
+24480/24480 - 3146s - loss: 0.4979 - accuracy: 0.5033 - mse: 0.4967 - val_loss: 0.4215 - val_accuracy: 0.5785 - val_mse: 0.4215
+2020-09-14 07:03:53.890708: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 07:03:53.890776: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 07:10:42.505334: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-09-14 07:10:42.505706: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 7/100
+24485/24485 - 3125s - loss: 0.4970 - accuracy: 0.5037 - mse: 0.4963 - val_loss: 0.4158 - val_accuracy: 0.5842 - val_mse: 0.4158
+2020-09-14 08:07:21.302632: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 08:07:21.302763: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 08:14:32.897372: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 08:14:32.897372: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 8/100
+24479/24479 - 3830s - loss: 0.4951 - accuracy: 0.5047 - mse: 0.4953 - val_loss: 0.4181 - val_accuracy: 0.5819 - val_mse: 0.4181
+2020-09-14 09:12:17.389877: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 09:12:17.389996: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 09:19:21.063166: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 09:19:21.063238: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 9/100
+24483/24483 - 3888s - loss: 0.4945 - accuracy: 0.5041 - mse: 0.4959 - val_loss: 0.4180 - val_accuracy: 0.5819 - val_mse: 0.4181
+2020-09-14 10:18:11.982561: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 10:18:11.982662: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 10:26:34.643507: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 10:26:34.643520: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 10/100
+24463/24463 - 4034s - loss: 0.4963 - accuracy: 0.5038 - mse: 0.4962 - val_loss: 0.4171 - val_accuracy: 0.5829 - val_mse: 0.4171
+2020-09-14 11:19:53.122867: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 11:19:53.123041: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 11:28:08.068926: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-09-14 11:28:08.068926: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 11/100
+24479/24479 - 3693s - loss: 0.4937 - accuracy: 0.5044 - mse: 0.4956 - val_loss: 0.4172 - val_accuracy: 0.5828 - val_mse: 0.4172
+2020-09-14 12:26:10.943128: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 12:26:10.943285: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 12:34:09.992312: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-09-14 12:34:09.992605: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 12/100
+24480/24480 - 3962s - loss: 0.4948 - accuracy: 0.5043 - mse: 0.4957 - val_loss: 0.4174 - val_accuracy: 0.5826 - val_mse: 0.4174
+2020-09-14 13:31:35.808562: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 13:31:35.808620: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 13:40:06.298802: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 13:40:06.298857: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 13/100
+24471/24471 - 3956s - loss: 0.4954 - accuracy: 0.5041 - mse: 0.4959 - val_loss: 0.4161 - val_accuracy: 0.5839 - val_mse: 0.4161
+2020-09-14 14:37:42.055828: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 14:37:42.055928: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 14:46:21.523819: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 14:46:21.523832: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 14/100
+24486/24486 - 3975s - loss: 0.4929 - accuracy: 0.5036 - mse: 0.4964 - val_loss: 0.4163 - val_accuracy: 0.5837 - val_mse: 0.4163
+2020-09-14 15:43:36.349607: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 15:43:36.349747: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 15:51:39.178475: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 15:51:39.178474: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 15/100
+24464/24464 - 3918s - loss: 0.4906 - accuracy: 0.5041 - mse: 0.4959 - val_loss: 0.4181 - val_accuracy: 0.5819 - val_mse: 0.4181
+2020-09-14 16:44:52.166483: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 16:44:52.166620: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 16:53:13.294523: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 16:53:13.294802: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 16/100
+24456/24456 - 3694s - loss: 0.4923 - accuracy: 0.5035 - mse: 0.4965 - val_loss: 0.4189 - val_accuracy: 0.5811 - val_mse: 0.4189
+2020-09-14 17:54:30.393335: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 17:54:30.393406: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 18:03:44.741278: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 18:03:44.741242: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 17/100
+24467/24467 - 4231s - loss: 0.4946 - accuracy: 0.5044 - mse: 0.4956 - val_loss: 0.4180 - val_accuracy: 0.5820 - val_mse: 0.4180
+2020-09-14 18:53:33.218152: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 18:53:33.218123: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 19:02:41.142349: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[Shape/_4]]
+2020-09-14 19:02:41.142786: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 18/100
+24469/24469 - 3536s - loss: 0.4931 - accuracy: 0.5054 - mse: 0.4946 - val_loss: 0.4167 - val_accuracy: 0.5833 - val_mse: 0.4167
+2020-09-14 19:52:49.992889: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 19:52:49.992844: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 20:01:56.508359: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+2020-09-14 20:01:56.508318: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+Epoch 19/100
+24469/24469 - 3555s - loss: 0.4900 - accuracy: 0.5043 - mse: 0.4957 - val_loss: 0.4187 - val_accuracy: 0.5813 - val_mse: 0.4187
+2020-09-14 20:52:00.830473: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 20:52:00.830577: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 21:01:10.254276: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 21:01:10.254344: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 20/100
+24487/24487 - 3554s - loss: 0.4959 - accuracy: 0.5041 - mse: 0.4959 - val_loss: 0.4170 - val_accuracy: 0.5830 - val_mse: 0.4170
+2020-09-14 22:04:14.406577: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 22:04:14.406659: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 22:11:22.938246: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 22:11:22.938353: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 21/100
+24473/24473 - 4213s - loss: 0.4909 - accuracy: 0.5044 - mse: 0.4956 - val_loss: 0.4207 - val_accuracy: 0.5793 - val_mse: 0.4207
+2020-09-14 23:13:14.555720: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 23:13:14.555802: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-14 23:20:10.012664: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-14 23:20:10.012668: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 22/100
+24491/24491 - 4127s - loss: 0.4955 - accuracy: 0.5034 - mse: 0.4966 - val_loss: 0.4163 - val_accuracy: 0.5837 - val_mse: 0.4163
+2020-09-15 00:20:22.090308: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-15 00:20:22.090462: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_6]]
+2020-09-15 00:29:20.754230: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+2020-09-15 00:29:20.754277: W tensorflow/core/common_runtime/base_collective_executor.cc:216] BaseCollectiveExecutor::StartAbort Out of range: End of sequence
+	 [[{{node IteratorGetNext}}]]
+	 [[IteratorGetNext/_2]]
+Epoch 23/100
+24487/24487 - 4151s - loss: 0.4882 - accuracy: 0.5045 - mse: 0.4955 - val_loss: 0.4179 - val_accuracy: 0.5821 - val_mse: 0.4179
+User defined signal 2
