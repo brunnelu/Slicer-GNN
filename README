@@ -1,2 +1,2 @@
-install pip3 trimesh open3d networkx 
+install pip3 trimesh open3d networkx scipy pandas numpy
 apt get install openscad

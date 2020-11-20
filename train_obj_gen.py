@@ -59,7 +59,7 @@ def gen_horizontal_hole(diam=0.77, critical=0.7,thickness=2, dimension=20, edges
     # diam >7mm critical
     res, critical = gen_vertical_hole(diam, critical, thickness=thickness,
                                       dimension=dimension, edges_cylinder=edges_cylinder, draw=False)
-    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix())
+    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
 
     if draw:
         draw_critical(res, critical)
@@ -92,11 +92,11 @@ def gen_overhanging_side(angle=45, length=10, critical_bound=(30, 45), thickness
 
     # random translation
 
-    side.rotate(R.from_rotvec([0, 0, -angle]).as_matrix())
+    side.rotate(R.from_rotvec([0, 0, -angle]).as_matrix(),center=(0,0,0))
     side.translate([thickness+0.1, 2, 0])
     res = union([pole, side])
 
-    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix())
+    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
 
     critical = get_critical_normal_array(res, critical_bound=critical_bound)
 
@@ -116,12 +116,12 @@ def gen_overhang_double(angle=45, length=10, critical_bound=(30, 45), thickness=
     right, _ = gen_overhanging_side(
         angle=angle, length=length, critical_bound=critical_bound, thickness=thickness)
 
-    left.rotate(R.from_rotvec([-np.pi/2, 0, 0]).as_matrix())
-    right.rotate(R.from_rotvec([-np.pi/2, 0, 0]).as_matrix())
+    left.rotate(R.from_rotvec([-np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
+    right.rotate(R.from_rotvec([-np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
 
     # rotate right to oposite side
 
-    right.rotate(R.from_rotvec([0, np.pi, 0]).as_matrix())
+    right.rotate(R.from_rotvec([0, np.pi, 0]).as_matrix(),center=(0,0,0))
     left.translate([-length/math.sqrt(2), 0, 0])
 
     # random translation
@@ -129,7 +129,7 @@ def gen_overhang_double(angle=45, length=10, critical_bound=(30, 45), thickness=
     #side.translate([thickness+0.1, 2, 0])
     res = union([left, right])
     res = center_mesh(res)
-    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix())
+    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
     critical = get_critical_normal_array(res, critical_bound=critical_bound)
 
     if draw:
@@ -158,7 +158,7 @@ def gen_fine_wall_single(thickness=0.5, critical_=0.5, dimension=8, ext=2, out=T
     if critical_ < thickness:
         critical = np.zeros(critical.shape)
 
-    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix())
+    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
 
     if draw:
         draw_critical(res, critical)
@@ -173,8 +173,7 @@ def gen_fine_walls(thickness=0.5, critical_=0.5, dimension=5, ext=2, nr_boxes=10
     boxes = []
 
     for _ in range(nr_boxes):
-        boxes.append(create_box().rotate(R.from_rotvec(
-            [0, random.random() * np.pi, 0]).as_matrix()))
+        boxes.append(create_box().rotate(R.from_rotvec([0, random.random() * np.pi, 0]).as_matrix(),center=(0,0,0)))
 
     # center boxes
     boxes = [center_mesh(box) for box in boxes]
@@ -185,7 +184,7 @@ def gen_fine_walls(thickness=0.5, critical_=0.5, dimension=5, ext=2, nr_boxes=10
 
     res = union(boxes)
 
-    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix())
+    res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
 
     critical = get_critical_normal_array(res, critical_bound=(90-1e-4, 180))
 

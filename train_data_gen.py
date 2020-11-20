@@ -11,7 +11,13 @@ from train_obj_gen import gen_fine_wall_single, gen_fine_walls, gen_horizontal_h
 from dual import get_dual
 
 savedir = '/home/lucas/Documents/data/'
+os.makedirs(savedir,exist_ok=True)
+os.makedirs(savedir+'stl/',exist_ok=True)
+os.makedirs(savedir+'features/',exist_ok=True)
 
+df = pd.DataFrame(columns=["id", "sample"])
+df.to_csv(savedir+f'samples.tsv',
+              header=["id", "sample"], sep='\t', index=False)
 
 def gen_sample(id_, walk_length=20, nr_walks=20, draw=True):
 
@@ -34,7 +40,8 @@ def gen_sample(id_, walk_length=20, nr_walks=20, draw=True):
     G, face_feature = get_dual(mesh)
 
     #if all faces are critical something went wrong and we discard this sample
-    if np.all(critical):
+    #for training at least one should be critical to be more sample efficient
+    if np.all(critical) or np.all(np.logical_not(critical)):
         print('discard sample')
         return None
 
@@ -62,21 +69,21 @@ def create_samples(n=10, walk_length=20, nr_walks=20, draw=True):
     df = pd.read_csv(savedir+f'samples.tsv', sep='\t')
 
     # create new samples
-    for _ in range(n):
+    while len(df) < n:
         id_ = len(df)+1
         sample = gen_sample(id_, walk_length=walk_length, nr_walks=nr_walks,draw=draw)
 
         if not sample is None:
             df = df.append({'id': id_, 'sample': sample}, ignore_index=True)
 
-    # save id of samples
-    df.to_csv(savedir+f'samples.tsv',
-              header=["id", "sample"], sep='\t', index=False)
+        # save id of samples
+        df.to_csv(savedir+f'samples.tsv',
+                header=["id", "sample"], sep='\t', index=False)
 
 
 if __name__ == "__main__":
     
-    create_samples(n=1000,draw=False)
+    create_samples(n=10000,draw=False)
 
     exit()
     mesh = gen_fine_walls(draw=True)
