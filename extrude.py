@@ -4,6 +4,7 @@ import trimesh
 from global_param import *
 from util import vertice2cubevertices
 
+""" Methods used to apply extrusion """
 
 def get_components(mesh):
 
@@ -104,9 +105,8 @@ def extrude(mesh, source_trimesh):
     assert(source_trimesh.is_watertight)
     
     # get separate components
-    components = get_components(mesh)#get_component_faces(mesh)#
-    # components = [components[0],components[2],components[3]]
-    #components = [components[1]]
+    components = get_components(mesh)#get_component_faces(mesh)
+
     connected_components = []
     
     # actual extrusion

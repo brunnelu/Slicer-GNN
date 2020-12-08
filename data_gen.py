@@ -10,7 +10,9 @@ from util import randow_walk, draw_critical_prob
 from train_obj_gen import gen_fine_wall_single, gen_fine_walls, gen_horizontal_hole, gen_vertical_hole, gen_overhanging_side, gen_overhang_double
 from dual import get_dual
 
-savedir = '/home/lucas/Documents/data/'
+""" Generating artificial training dataset """
+
+savedir = './'
 os.makedirs(savedir,exist_ok=True)
 os.makedirs(savedir+'stl/',exist_ok=True)
 os.makedirs(savedir+'features/',exist_ok=True)
@@ -85,18 +87,11 @@ if __name__ == "__main__":
     
     create_samples(n=10000,draw=False)
 
-    exit()
-    mesh = gen_fine_walls(draw=True)
-    mesh, array = gen_overhang_double(draw=True)
+    # visualization of single training objects
+    # mesh = gen_fine_walls(draw=True)
+    # mesh, array = gen_overhang_double(draw=True)
 
-    mesh = gen_vertical_hole(draw=True)
-    mesh = gen_horizontal_hole(draw=True)
-    mesh = gen_fine_wall_single(draw=True)
-    mesh = gen_fine_wall_single(out=False, draw=True)
-
-    exit()
-    #fix sample
-    df = pd.DataFrame()
-    df = df.append({'id': 1, 'sample': 'bla'}, ignore_index=True)
-    df.to_csv(savedir+f'samples.tsv',
-              header=["id", "sample"], sep='\t', index=False)
+    # mesh = gen_vertical_hole(draw=True)
+    # mesh = gen_horizontal_hole(draw=True)
+    # mesh = gen_fine_wall_single(draw=True)
+    # mesh = gen_fine_wall_single(out=False, draw=True)

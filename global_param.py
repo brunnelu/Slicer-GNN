@@ -12,4 +12,4 @@ rad_prev = 10.
 
 exact_limit=100
 
-path = "../../../Shared/SemesterArbeit_FeatureRecognition/01_Geometries/012020_NewGeometries/"
+path = "./012020_NewGeometries/"

@@ -8,6 +8,8 @@ from critical import get_critical
 from extrude import extrude
 from dual import get_dual
 
+""" Shows the extruding process applied to meshes. Critical are all faces with face normals pointing to the ground """
+
 def main(path, draw_critical=False):
     source = o3d.io.read_triangle_mesh(path)
 
@@ -70,8 +72,4 @@ def main(path, draw_critical=False):
     o3d.visualization.draw_geometries([processed_source_mesh,critical_mesh])
 
 if __name__ == "__main__":
-    main("../model/body.stl",True)
-    exit()
-    for letter in ['A','B','C','D','E','F','G','H','I','J']:
-        print(f'processing file: {letter}')
-        main(path+f"Part_{letter}.STL",True)
+    main("../model/Demo_2.STL",True)

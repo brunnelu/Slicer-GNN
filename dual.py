@@ -4,6 +4,7 @@ import trimesh
 import open3d as o3d
 import networkx as nx
 
+""" Finding Dual of mesh graph """
 
 def get_dual(mesh):
     #takes o3d source and computes dual

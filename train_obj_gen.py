@@ -8,7 +8,7 @@ from util import draw_registration_result, o3d2trimesh, trimesh_mesh2o3d_mesh, d
 from scipy.spatial.transform import Rotation as R
 
 import random
-
+"""  Generation of artificial training meshes. """
 
 def center_mesh(mesh):
     mesh.translate(-mesh.get_center())
@@ -66,14 +66,6 @@ def gen_horizontal_hole(diam=0.77, critical=0.7,thickness=2, dimension=20, edges
 
     return res, critical
 
-
-def gen_inclined_hole(diam, angle):
-    # critical with D=f(alpha)
-
-    # TODO implement
-    return
-
-
 def gen_overhanging_side(angle=45, length=10, critical_bound=(30, 45), thickness=3, draw=False):
     # overhanging and critical if angle in bound
 
@@ -91,7 +83,6 @@ def gen_overhanging_side(angle=45, length=10, critical_bound=(30, 45), thickness
     side = center_mesh(side)
 
     # random translation
-
     side.rotate(R.from_rotvec([0, 0, -angle]).as_matrix(),center=(0,0,0))
     side.translate([thickness+0.1, 2, 0])
     res = union([pole, side])
@@ -125,8 +116,6 @@ def gen_overhang_double(angle=45, length=10, critical_bound=(30, 45), thickness=
     left.translate([-length/math.sqrt(2), 0, 0])
 
     # random translation
-    #side.rotate(R.from_rotvec([0, 0, -angle]).as_matrix())
-    #side.translate([thickness+0.1, 2, 0])
     res = union([left, right])
     res = center_mesh(res)
     res = res.rotate(R.from_rotvec([np.pi/2, 0, 0]).as_matrix(),center=(0,0,0))
@@ -197,10 +186,6 @@ def gen_fine_walls(thickness=0.5, critical_=0.5, dimension=5, ext=2, nr_boxes=10
     return res, critical
 
 
-def gen_sharp_corner(diam):
-    # fine corner in the size of lazer parameter are criticall
-    return
-
 
 if __name__ == "__main__":
     gen_horizontal_hole(diam=0.3, critical=0.7,thickness=2, dimension=20, edges_cylinder=64, draw=True)
@@ -213,5 +198,3 @@ if __name__ == "__main__":
     mesh = gen_horizontal_hole(draw=True)
     mesh = gen_fine_wall_single(draw=True)
     mesh = gen_fine_wall_single(out=False, draw=True)
-
-    # o3d.io.write_triangle_mesh('test.stl',mesh)

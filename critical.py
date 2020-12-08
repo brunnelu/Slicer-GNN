@@ -4,6 +4,7 @@ import copy
 
 from global_param import *
 
+""" Simple critical test based on the face normals """
 
 def unit_vector(vector):
     return vector / np.linalg.norm(vector)
@@ -34,8 +35,7 @@ def get_critical_object_array(source_mesh, critical_mesh, res):
     #TODO find better condition
     vertices_critical = set((vertices[i][0],vertices[i][1],vertices[i][2]) for i in range(len(vertices))).difference(set((vertices_source[i][0],vertices_source[i][1],vertices_source[i][2]) for i in range(len(vertices_source))))
     print(f'Nr critical vertices {len(vertices_critical)}')
-    #vertices_critical = set((vertices_critical[i][0],vertices_critical[i][1],vertices_critical[i][2]) for i in range(len(vertices_critical)))
-    #print(vertices_critical)
+
     for i, triangle in enumerate(triangles):
         vertex_0 = (vertices[triangle[0]][0],vertices[triangle[0]][1],vertices[triangle[0]][2])
         vertex_1 = (vertices[triangle[1]][0],vertices[triangle[1]][1],vertices[triangle[1]][2])
@@ -110,13 +110,10 @@ def get_critical(source):
             critical_triangles.append(triangle)
             critical_triangles_normals.append(v1)
 
-        # print(triangle)
-        # print(triangle_normals[i])
-
-    # o3d.visualization.draw_geometries([source])
     print(source)
     print(len(critical_triangles_normals), len(critical_triangles))
     print(f'number of criticall triangles: {len(critical_triangles)}')
+
     # compy mesh for mesh with proplem areas
     feature_mesh=copy.deepcopy(source)
     feature_mesh.triangles=o3d.utility.Vector3iVector(critical_triangles)
@@ -125,6 +122,5 @@ def get_critical(source):
 
     # crop triangle mesh to have smaler traingles
     feature_mesh.remove_unreferenced_vertices()
-    # print(feature_mesh)
 
     return feature_mesh

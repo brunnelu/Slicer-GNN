@@ -2,13 +2,8 @@ import tensorflow as tf
 import numpy as np 
 
 '''
-Generating training sets. 
+Loading a training dataset
 
-INFO for some training set
-
-basis 
-samples: 76352
-critical: 2361
 '''
 
 
@@ -44,19 +39,7 @@ def get_dataset(path, walk_length=20, nr_walks=20,feature_length = 12,train = Tr
     
     #combine all columns to get continous feature and label
     ds = ds.map(pack)
-    
-    '''
-    critical = 0
-    total = 0
-    
-    for features, labels in ds:
-        total+=1
-        if labels==1.0:
-            critical+=1
-            
-    print(f'total: {total} critical: {critical}')
-    '''
-    
+=
     
     for features, labels in ds.take(1):
         print(features.numpy().shape)
