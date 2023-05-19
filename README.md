@@ -1,6 +1,6 @@
 # FeatureID
 
-This project is a proof of concept on how ML can be used to find critical parts for AM. Our new approach allows to easily separate input meshes in critical and non critical parts. For training artificial dataa is created.
+This project is a proof of concept on how ML can be used to find critical parts for AM. Our new approach allows to easily separate input meshes in critical and non critical parts. For training artificial data is created.
 
 ## Requirements
 pip3 install trimesh open3d networkx scipy pandas numpy
